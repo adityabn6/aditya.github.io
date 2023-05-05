@@ -1,21 +1,24 @@
-name: "Rupam Bhattacharyya"                                # CHANGE HERE 
+name: "Veera"                                # CHANGE HERE 
 output_dir: "."
 navbar:
-  title: "Homepage of Rupam Bhattacharyya"                             # CHANGE HERE 
+  title: "BayesRX"                             # CHANGE HERE 
   type: inverse
   left:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "Academic"
-      icon: fa-book
+    - text: "Welcome"
+      icon: fa-user
+      href: Biography.html
+    - text: "Softwares"
+      icon: fa-book-open
 #     icon: fa-user 
       href: academic.html
     - text: "Research"
       icon: fa-gitlab
 #     icon: fa-file-pdf-o
       href: research.html
-    - text: "Social"
+    - text: "Team"
       icon: fa-users
 #     icon: fa-rss
       href: social.html
@@ -24,12 +27,16 @@ navbar:
     - icon: fa-envelope-o
       href: mailto:rupamb@umich.edu                    # CHANGE HERE 
     - icon: fa-github
-      href: https://github.com/rupambh       # CHANGE HERE 
-    - icon: fa-linkedin
-      href: https://www.linkedin.com/in/rupam2016bhattacharyya/
+      href: https://github.com/bayesrx/bayesrx.github.io       # CHANGE HERE 
+    - icon: fa-twitter
+      href: https://twitter.com/veerab
     - text: CV
-      href: https://drive.google.com/file/d/1EaBT63r_Bf7c6FvuQL7TphOHW0GLYQit/view?usp=sharing
+      href: https://docs.google.com/document/d/1eXMNuCsLIss1DVuVUYruCo7OFeIndsnYYHWrxxiVGN4/edit?usp=sharing
 output:
   html_document:
-    theme: darkly
-    highlight: textmate
+    theme:
+      bootswatch: lux
+      primary_color: "#001f3f"
+      secondary_color: "#0074D9"
+      highlight_color: "#7FDBFF"
+      code_font_family: "Courier New"

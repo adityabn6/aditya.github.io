@@ -1,0 +1,58 @@
+---
+title: "Team"
+output:
+  html_document
+---
+
+# Postdoctoral Researchers
+
+<div class="row">
+<div class="col-sm-3">
+    <img src="veera.jpg">
+    <h4>John Doe</h4>
+    <p><em>Research areas:</em><br>Bayesian inference, computational statistics</p>
+</div>
+<div class="col-sm-3">
+    <img src="veera.jpg">
+    <h4>Jane Doe</h4>
+    <p><em>Research areas:</em><br>Machine learning, data science</p>
+</div>
+</div>
+
+# PhD Students
+
+<div class="row">
+<div class="col-sm-4">
+    <img src="veera.jpg">
+    <h4>James Smith</h4>
+    <p><em>Research areas:</em><br>Bayesian networks, probabilistic graphical models</p>
+</div>
+<div class="col-sm-4">
+    <img src="veera.jpg">
+    <h4>Sarah Johnson</h4>
+    <p><em>Research areas:</em><br>Deep learning, computer vision</p>
+</div>
+<div class="col-sm-4">
+    <img src="veera.jpg">
+    <h4>Michael Brown</h4>
+    <p><em>Research areas:</em><br>High-dimensional statistics, sparse regression</p>
+</div>
+</div>
+
+# Masters Students
+
+<div class="row">
+<div class="col-sm-4">
+    <img src="veera.jpg">
+    <h4>Alice Lee</h4>
+    <p><em>Research areas:</em><br>Bayesian optimization, experimental design</p>
+</div>
+<div class="col-sm-4">
+    <img src="veera.jpg">
+</div>
+<div class="col-sm-4">
+    <img src="veera.jpg">
+    <h4>Emily Kim</h4>
+    <p><em>Research areas:</em><br>Statistical genetics, bioinformatics</p>
+</div>
+</div>

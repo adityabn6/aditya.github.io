@@ -1,0 +1,57 @@
+/* Set body background color to white */
+body {
+  background-color: #ffffff;
+}
+
+/* Navbar background color is blue */
+.navbar {
+  background-color: #0077cc;
+}
+
+/* Navbar links are white */
+.navbar a {
+  color: #ffffff;
+}
+
+/* Make navbar hover effects light blue */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #0077cc;
+  color: #ffffff;
+}
+
+/* Set the main text color to black */
+.main-container {
+  color: #000000;
+}
+
+/* Style link colors and hover effects */
+a {
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background-color: #0077cc;
+  color: #ffffff;
+}
+
+/* Style headings and subheadings */
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}

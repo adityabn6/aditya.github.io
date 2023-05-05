@@ -11,29 +11,21 @@
 
 
 
-<title>Some glimpses of my research profile…</title>
+<title>research.knit</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-5.2.2/bootstrap.bundle.min.js"></script>
+<script src="site_libs/bs3compat-0.4.2/transition.js"></script>
+<script src="site_libs/bs3compat-0.4.2/tabs.js"></script>
+<script src="site_libs/bs3compat-0.4.2/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -143,11 +135,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -176,8 +172,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -185,16 +181,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -243,7 +232,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Homepage of Rupam Bhattacharyya</a>
+      <a class="navbar-brand" href="index.html">BayesRX</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -255,10 +244,17 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="academic.html">
-    <span class="fa fa-book"></span>
+  <a href="Biography.html">
+    <span class="fa fa-user"></span>
      
-    Academic
+    Welcome
+  </a>
+</li>
+<li>
+  <a href="academic.html">
+    <span class="fa fa-book-open"></span>
+     
+    Softwares
   </a>
 </li>
 <li>
@@ -284,19 +280,19 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="https://github.com/rupambh">
+  <a href="https://github.com/bayesrx/bayesrx.github.io">
     <span class="fa fa-github"></span>
      
   </a>
 </li>
 <li>
-  <a href="https://www.linkedin.com/in/rupam2016bhattacharyya/">
-    <span class="fa fa-linkedin"></span>
+  <a href="https://twitter.com/veerab">
+    <span class="fa fa-twitter"></span>
      
   </a>
 </li>
 <li>
-  <a href="https://drive.google.com/file/d/1EaBT63r_Bf7c6FvuQL7TphOHW0GLYQit/view?usp=sharing">CV</a>
+  <a href="https://docs.google.com/document/d/1eXMNuCsLIss1DVuVUYruCo7OFeIndsnYYHWrxxiVGN4/edit?usp=sharing">CV</a>
 </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -307,101 +303,27 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Some glimpses of my research profile…</h1>
 
 </div>
 
 
+<hr />
+<hr />
 <p><br></p>
-<p><img src="Conference.jpeg" width="50%" style="display: block; margin: auto;" /></p>
+<div id="bayesrx-group-current-future-research-efforts"
+class="section level2">
+<h2>BayesRx Group Current &amp; Future Research Efforts</h2>
+<p><img src="Research.png" width="50%" style="display: block; margin: auto;" /></p>
 <p><br></p>
-<p>Below is a list of my published projects (in descending order of
-publication year) and upcoming conference presentations. Please refer to
-my <a
-href="https://drive.google.com/file/d/1EaBT63r_Bf7c6FvuQL7TphOHW0GLYQit/view?usp=sharing">CV</a>,
-<a
-href="https://www.researchgate.net/profile/Rupam-Bhattacharyya">Researchgate
-profile</a> or <a
-href="https://scholar.google.com/citations?user=D5F2V4YAAAAJ&amp;hl=en">Google
-Scholar page</a> to get a complete list of my preprints, ongoing
-projects, past presentations and accolades. My CV also contains the most
-updated list of my administrative and peer review activities.</p>
-<div id="published-works" class="section level2">
-<h2>Published Works</h2>
-<ul>
-<li><p><strong>Bhattacharyya, R.</strong>, Banerjee, S., Mohammed, S.,
-&amp; Baladandayuthapani, V. (2023). Network-based modeling of COVID-19
-dynamics: early pandemic spread in India. <em>Journal of the Indian
-Statistical Association</em>, to appear.</p></li>
-<li><p><strong>Bhattacharyya, R.</strong>, Henderson, N., &amp;
-Baladandayuthapani, V. (2023, January). BaySyn: Bayesian evidence
-synthesis for multi-system multiomic integration. In <em>Pacific
-Symposium on Biocomputing</em> (Vol. 28, No. 2023,
-pp. 275-286).</p></li>
-<li><p><strong>Bhattacharyya, R.</strong>, Burman, A., Singh, K.,
-Banerjee, S., Maity, S., Auddy, A., … &amp; Baladandayuthapani, V.
-(2022). Role of multi-resolution vulnerability indices in COVID-19
-spread in India: A Bayesian model-based analysis. <em>BMJ Open</em>,
-12(11), e056292.</p></li>
-<li><p>Salvatore, M., Purkayastha, S., Ganapathi, L.,
-<strong>Bhattacharyya, R.</strong>, Kundu, R., Zimmermann, L., … &amp;
-Mukherjee, B. (2022). Lessons from SARS-CoV-2 in India: A data-driven
-framework for pandemic resilience. <em>Science Advances</em>, 8(24),
-eabp8621.</p></li>
-<li><p>Purkayastha, S., <strong>Bhattacharyya, R.</strong>, Bhaduri, R.,
-Kundu, R., Gu, X., Salvatore, M., … &amp; Mukherjee, B. (2021). A
-comparison of five epidemiological models for transmission of SARS-CoV-2
-in India. <em>BMC Infectious Diseases</em>, 21(1), 1-23.</p></li>
-<li><p><strong>Bhattacharyya, R.</strong>, Kundu, R., Bhaduri, R., Ray,
-D., Beesley, L. J., Salvatore, M., &amp; Mukherjee, B. (2021).
-Incorporating false negative tests in epidemiological models for
-SARS-CoV-2 transmission and reconciling with seroprevalence estimates.
-<em>Scientific Reports</em>, 11(1), 1-14.</p></li>
-<li><p>Ray, D., <strong>Bhattacharyya, R.</strong>, &amp; Mukherjee, B.
-(2021). Discussion on “The timing and effectiveness of implementing mild
-interventions of COVID-19 in large industrial regions via a synthetic
-control method” by Tian et al. <em>Statistics and Its Interface</em>,
-14(1), 25-28.</p></li>
-<li><p>Salvatore, M., Basu, D., Ray, D., Kleinsasser, M., Purkayastha,
-S., <strong>Bhattacharyya, R.</strong>, &amp; Mukherjee, B. (2020).
-Comprehensive public health evaluation of lockdown as a
-non-pharmaceutical intervention on COVID-19 spread in India: national
-trends masking state-level variations. <em>BMJ Open</em>, 10(12),
-e041778.</p></li>
-<li><p>Ray, D., Salvatore, M., <strong>Bhattacharyya, R.</strong>, Wang,
-L., Du, J., Mohammed, S., … &amp; Mukherjee, B. (2020). Predictions,
-role of interventions and effects of a historic national lockdown in
-India’s response to the COVID-19 pandemic: data science call to arms.
-<em>Harvard Data Science Review</em>, 2020(Suppl 1).</p></li>
-<li><p><strong>Bhattacharyya, R.</strong>, Ha, M. J., Liu, Q., Akbani,
-R., Liang, H., &amp; Baladandayuthapani, V. (2020). Personalized network
-modeling of the pan-cancer patient and cell line interactome. <em>JCO
-Clinical Cancer Informatics</em>, 4, 399-411.</p></li>
-<li><p>Liu, Q., Ha, M. J., <strong>Bhattacharyya, R.</strong>, Garmire,
-L., &amp; Baladandayuthapani, V. (2020, January). Network-based matching
-of patients and targeted therapies for precision oncology. In
-<em>Pacific Symposium on Biocomputing</em> (Vol. 25, No. 2020,
-pp. 623-634).</p></li>
-</ul>
-</div>
-<div id="upcoming-presentations" class="section level2">
-<h2>Upcoming Presentations</h2>
-<ul>
-<li>BaySyn: Bayesian Evidence Synthesis for Multi-system Multiomic
-Integration.
-<ul>
-<li><a href="https://psb.stanford.edu/">Pacific Symposium on
-Biocomputing</a> (January 2023).</li>
-</ul></li>
-<li>fiBAG: Functional Integrative Bayesian Analysis of High-dimensional
-Multi-platform Genomic Data.
-<ul>
-<li><a href="https://sites.google.com/view/abgod2023/home">ABGOD
-Conference</a> (March 2023).</li>
-<li><a href="https://www.enar.org/meetings/spring2023/">ENAR Spring
-Meeting</a> (March 2023).</li>
-</ul></li>
-</ul>
+<p>Our current and future research efforts have four main themes shown
+as four quadrants above. The first is developing Bayesian hierarchical
+models for multi-platform genomics and imaging data for mechanims and
+biomarker discovery (top left); Bayesian high-dimensional
+graphical/netwrok models (top right); development of scalable software
+for reproducibilty and visualization (bottom left – also see software
+section) and finally implement these tools in a clinical/translational
+setting (bottom right). The data sets that feed into these efforts are
+shown in the corners [see some selected publications below]</p>
 </div>
 
 
