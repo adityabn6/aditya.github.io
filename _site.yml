@@ -9,7 +9,7 @@ navbar:
       href: index.html
     - text: "Welcome"
       icon: fa-user
-      href: Biography.html
+      href: biography.html
     - text: "Softwares"
       icon: fa-book-open
 #     icon: fa-user 
